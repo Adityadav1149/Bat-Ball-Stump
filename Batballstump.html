@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="Batballstump.css" />
+    <title>Bat Ball Stump</title>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <!-- Here Bat Decleare -->
+    <button
+      onclick="
+    // console.log('You choose Bat');
+    const userChoisemsg = `You choose Bat`;
+    let randomNum = Math.random() * 3;
+    let computerChoise;
+    if(randomNum > 0 && randomNum <= 1){
+      computerChoise = 'Bat';
+      // console.log('computer choose Bat');
+    }else if(randomNum > 1 && randomNum <= 2){
+      computerChoise = 'Ball';
+      // console.log('computer choose Ball');
+    }else{
+      computerChoise = 'Stump';
+      // console.log('computer choose stump');
+    };
+    // console.log(`Computer choose ${computerChoise}`)
+    const computerChoiseMsg = `Computer choose ${computerChoise}`;
+
+    let resultMsg;
+    if(computerChoise === 'Ball'){
+      // console.log('You won match');
+      resultMsg = `You won match`;
+    }else if(computerChoise === 'Stump'){
+      // console.log('Computer won match')
+      resultMsg = `Computer won match`;
+    }else{
+      // console.log('match tie');
+      resultMsg = `Computer won match`;
+    }
+
+    alert(`${userChoisemsg}, ${computerChoiseMsg}, ${resultMsg}.`)
+    ">
+      Bat
+    </button>
+
+    <!-- Here Ball Decleare -->
+    <button
+      onclick="
+      // console.log('You choose Ball');
+      userChoisemsg = `You choose Ball`;
+      randomNum = Math.random() * 3;
+      if(randomNum > 0 && randomNum <= 1){
+        computerChoise = 'Bat';
+        // console.log('computer choose Bat');
+      }else if(randomNum > 1 && randomNum <= 2){
+        computerChoise = 'Ball';
+        // console.log('computer choose Ball');
+      }else{
+        computerChoise = 'Stump';
+        // console.log('computer choose stump');
+      };
+      // console.log(`Computer choose ${computerChoise}`)
+        computerChoiseMsg = `computer choose ${computerChoise}`;
+  
+      
+      if(computerChoise === 'Bat'){
+        // console.log('You won match');
+        resultMsg = `Computer won match`;
+      }else if(computerChoise === 'Stump'){
+        // console.log('You lost match')
+        resultMsg = `You won match`;
+      }else{
+        // console.log('match tie');
+        resultMsg = `match tie`;
+      }
+      alert(`${userChoisemsg}, ${computerChoiseMsg}, ${resultMsg}.`)
+      ">
+      Ball
+    </button>
+
+    <!-- Here Stump Decleare -->
+    <button
+      onclick="
+      // console.log('You choose Stump');
+      userChoisemsg = `You choose Stump`;
+      randomNum = Math.random() * 3;
+      if(randomNum > 0 && randomNum <= 1){
+        computerChoise = 'Bat';
+        // console.log('computer choose Bat');
+      }else if(randomNum > 1 && randomNum <= 2){
+        computerChoise = 'Ball';
+        // console.log('computer choose Ball');
+      }else{
+        computerChoise = 'Stump';
+        // console.log('computer choose stump');
+      };
+      // console.log(`Computer choose ${computerChoise}`);
+      computerChoiseMsg = `computer choose ${computerChoise}`;
+  
+      if(computerChoise === 'Ball'){
+        // console.log('You won match');
+        resultMsg = `computer won match`;
+      }else if(computerChoise === 'Bat'){
+        // console.log('You lost match');
+        resultMsg = `You won match`;
+      }else{
+        // console.log('match tie');
+        resultMsg = `Match tie`;
+      }
+      alert(`${userChoisemsg}, ${computerChoiseMsg}, ${resultMsg}.`)
+      ">
+      Stump
+    </button>
+  </body>
+</html>

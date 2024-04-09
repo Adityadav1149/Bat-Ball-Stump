@@ -5,36 +5,40 @@
     <title>Bat Ball Stump</title>
   </head>
   <body>
-    <h1>Bat Ball Stump Game</h1>
+    <h1>Bat-Ball-Stump Game</h1>
+    <hr />
 
     <!-- Here Bat Decleare -->
     <button
+      class="choise-button"
       onclick="
     let computerChoise = randomComputerChoise();
     let resultMsg = getResult('Bat', computerChoise );
     getresultMsg('Bat', computerChoise, resultMsg)
     ">
-      Bat
+      <img src="image/bat.png" alt="bat image" class="choise-image" />
     </button>
 
     <!-- Here Ball Decleare -->
     <button
+      class="choise-button"
       onclick="
       computerChoise = randomComputerChoise();
       resultMsg = getResult('Ball', computerChoise );
       getresultMsg('Ball', computerChoise, resultMsg)
       ">
-      Ball
+      <img src="image/ball.png" alt="ball image" class="choise-image" />
     </button>
 
     <!-- Here Stump Decleare -->
     <button
+      class="choise-button"
       onclick="
       computerChoise = randomComputerChoise();
       resultMsg = getResult('Stump', computerChoise );
       getresultMsg('Stump', computerChoise, resultMsg)
       ">
-      Stump
+      <img src="image/stump.png" alt="stump image" class="choise-image" />
     </button>
 
     <!-- Result section -->
@@ -46,6 +50,7 @@
 
     <!-- Here Reset Button -->
     <button
+      class="reset-Btn"
       onclick="localStorage.clear() 
       resetScore()
       ">

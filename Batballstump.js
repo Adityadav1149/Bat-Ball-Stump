@@ -1,6 +1,6 @@
 let scoreStr = localStorage.getItem("Score");
 let Score;
-resetScore();
+resetScore(scoreStr);
 
 function resetScore(scoreStr) {
   Score = scoreStr

@@ -1,8 +1,8 @@
-let computerChoise;
 let computerChoiseMsg;
 
 function randomComputerChoise() {
   let randomNum = Math.random() * 3;
+  let computerChoise;
 
   if (randomNum > 0 && randomNum <= 1) {
     computerChoise = "Bat";
@@ -16,4 +16,6 @@ function randomComputerChoise() {
   }
   // console.log(`Computer choose ${computerChoise}`)
   computerChoiseMsg = `Computer choose ${computerChoise}`;
+
+  return computerChoise;
 }

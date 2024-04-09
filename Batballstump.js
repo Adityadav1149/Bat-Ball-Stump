@@ -1,5 +1,6 @@
 let scoreStr = localStorage.getItem("Score");
 let Score;
+resetScore();
 
 function resetScore(scoreStr) {
   Score = scoreStr
@@ -11,8 +12,10 @@ function resetScore(scoreStr) {
       };
 
   Score.displayResult = function () {
-    return ` Win : ${Score.win}, Lost : ${Score.lost}, Tie : ${Score.tie}`;
+    return `Score: Win = ${Score.win}, Lost = ${Score.lost}, Tie = ${Score.tie}`;
   };
+
+  getresultMsg();
 }
 
 // if (scoreStr !== undefined) {
@@ -74,7 +77,14 @@ function getResult(userMove, computerMove) {
 
 function getresultMsg(userMove, computerMove, result) {
   localStorage.setItem("Score", JSON.stringify(Score));
-  alert(`You choose ${userMove}, Computer choose ${computerMove}, 
-    ${result}
-    ${Score.displayResult()}.`);
+
+  document.querySelector("#user-move").innerText = userMove
+    ? `You choose ${userMove}`
+    : "";
+
+  document.querySelector("#computer-move").innerText =
+    computerMove !== undefined ? `Computer choose ${computerMove}` : "";
+
+  document.querySelector("#result").innerText = result || "";
+  document.querySelector("#score").innerText = Score.displayResult();
 }

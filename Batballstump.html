@@ -10,23 +10,9 @@
     <!-- Here Bat Decleare -->
     <button
       onclick="
-    // console.log('You choose Bat');
-    // computerChoise;
     let computerChoise = randomComputerChoise();
-
-    let resultMsg;
-    if(computerChoise === 'Ball'){
-      // console.log('You won match');
-      resultMsg = `You won match`;
-    }else if(computerChoise === 'Stump'){
-      // console.log('Computer won match')
-      resultMsg = `Computer won match`;
-    }else{
-      // console.log('match tie');
-      resultMsg = `Match tie!`;
-    }
-
-    alert(`You choose Bat, ${computerChoiseMsg}, ${resultMsg}.`);
+    let resultMsg = getResult('Bat', computerChoise );
+    getresultMsg('Bat', computerChoise, resultMsg)
     ">
       Bat
     </button>
@@ -34,22 +20,9 @@
     <!-- Here Ball Decleare -->
     <button
       onclick="
-      // console.log('You choose Ball');
-    computerChoise = randomComputerChoise();
-
-  
-      
-      if(computerChoise === 'Bat'){
-        // console.log('You won match');
-        resultMsg = `Computer won match`;
-      }else if(computerChoise === 'Stump'){
-        // console.log('You lost match')
-        resultMsg = `You won match`;
-      }else{
-        // console.log('match tie');
-        resultMsg = `match tie`;
-      }
-      alert(`You choose Ball, ${computerChoiseMsg}, ${resultMsg}.`)
+      computerChoise = randomComputerChoise();
+      resultMsg = getResult('Ball', computerChoise );
+      getresultMsg('Ball', computerChoise, resultMsg)
       ">
       Ball
     </button>
@@ -57,21 +30,9 @@
     <!-- Here Stump Decleare -->
     <button
       onclick="
-      // console.log('You choose Stump');
-    computerChoise = randomComputerChoise();
-    
-  
-      if(computerChoise === 'Ball'){
-        // console.log('You won match');
-        resultMsg = `computer won match`;
-      }else if(computerChoise === 'Bat'){
-        // console.log('You lost match');
-        resultMsg = `You won match`;
-      }else{
-        // console.log('match tie');
-        resultMsg = `Match tie`;
-      }
-      alert(`You choose Stump, ${computerChoiseMsg}, ${resultMsg}.`)
+      computerChoise = randomComputerChoise();
+      resultMsg = getResult('Stump', computerChoise );
+      getresultMsg('Stump', computerChoise, resultMsg)
       ">
       Stump
     </button>

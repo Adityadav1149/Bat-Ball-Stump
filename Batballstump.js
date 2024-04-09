@@ -1,21 +1,43 @@
-let computerChoiseMsg;
-
 function randomComputerChoise() {
   let randomNum = Math.random() * 3;
-  let computerChoise;
 
   if (randomNum > 0 && randomNum <= 1) {
-    computerChoise = "Bat";
-    // console.log('computer choose Bat');
+    return "Bat";
   } else if (randomNum > 1 && randomNum <= 2) {
-    computerChoise = "Ball";
-    // console.log('computer choose Ball');
+    return "Ball";
   } else {
-    computerChoise = "Stump";
-    // console.log('computer choose stump');
+    return "Stump";
   }
-  // console.log(`Computer choose ${computerChoise}`)
-  computerChoiseMsg = `Computer choose ${computerChoise}`;
+}
 
-  return computerChoise;
+function getResult(userMove, computerMove) {
+  if (userMove === "Bat") {
+    if (computerMove === "Ball") {
+      return `You won match`;
+    } else if (computerMove === "Stump") {
+      return `Computer won match`;
+    } else {
+      return `Match tie!`;
+    }
+  } else if (userMove === "Ball") {
+    if (computerMove === "Bat") {
+      return `Computer won match`;
+    } else if (computerMove === "Stump") {
+      return `You won match`;
+    } else {
+      return `match tie`;
+    }
+  } else {
+    if (computerMove === "Ball") {
+      return `computer won match`;
+    } else if (computerMove === "Bat") {
+      return `You won match`;
+    } else {
+      return `Match tie`;
+    }
+  }
+}
+
+function getresultMsg(userMove, computerMove, result) {
+  alert(`You choose ${userMove}, Computer choose ${computerMove}, ${result}.`);
 }
